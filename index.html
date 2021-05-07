@@ -1,28 +1,20 @@
 <html>
+<p id="demo">0</p>
+<button onclick="click()">Click</button>
+<button onclick="CPX()">Click</button>
 <script>
-var y = prompt("Main Color")
-var z = prompt("Box Shadow Color")
-var x = prompt("Background Color")
-document.write('<head>
-<style>
-.button {
-display: inline-block;
-padding: 34px 30px;
-font-size: 19px;
-cursor: pointer;
-text-align: center;
-text-decoration: none;
-outline: none;
-color: #'+y+';
-background-color: #'+x+';
-border: 4;
-border-radius: 30px;
-box-shadow: 0 0px #'+z+';
+var money = 0
+var CPS = 1
+function click(){
+money++
+document.getElementById("demo").innerHTML = money; 
 }
-</style>
-</head>
-<body>
-<button class="button">E</button>
-</body>')
+function CPX(){
+if(Math.round(CPS*5*CPS/5)>=money){
+CPS++
+money = Math.round(-5*CPS*CPS/5)
+}
+}
+  setInterval(function(){money = money - -1*CPS},1000)
 </script>
 </html>
