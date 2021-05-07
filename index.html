@@ -1,7 +1,7 @@
 <html>
 <p id="demo">0</p>
 <button onclick="click()">Click</button>
-<button onclick="CPX()">Click</button>
+<button onclick="CPX()">CPS+</button>
 <script>
 var money = 0
 var CPS = 1
@@ -12,7 +12,7 @@ document.getElementById("demo").innerHTML = money;
 function CPX(){
 if(Math.round(CPS*5*CPS/5)>=money){
 CPS++
-money = Math.round(-5*CPS*CPS/5)
+var smoney = money - Math.round(5*CPS*CPS/5)
 }
 }
   setInterval(function(){money = money - -1*CPS},1000)
